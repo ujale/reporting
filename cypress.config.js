@@ -5,13 +5,19 @@ const browserify = require("@badeball/cypress-cucumber-preprocessor/browserify")
 
 async function setupNodeEvents(on, config) {
   await preprocessor.addCucumberPreprocessorPlugin(on,config);
-
+  //require('cypress-mochawesome-reporter')(on)
   on('file:preprocessor', browserify.default(config));
 
   return config
 }
 
 module.exports = defineConfig({
+  reporter:'cypress-mochawesome-reporter',
+  reporterOptions:{
+    reportDir:'outputs/',
+    reportHtmlDir:'outputs/html/sign-up.html',
+    reportPageTitle:'Mochawesome test report'
+  },
   e2e: {
     baseUrl: 'https://staging.trymima.com/',
     viewportHeight: 960,
