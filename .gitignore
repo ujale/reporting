@@ -5,3 +5,4 @@ cypress.env.json
 reports/
 cypress/videos/
 cypress/screenshots/
+results/

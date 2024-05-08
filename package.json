@@ -14,7 +14,18 @@
     "@faker-js/faker": "^8.4.1",
     "cypress": "^13.7.1",
     "cypress-fill-command": "^1.0.2",
-    "cypress-mailslurp": "^1.9.0"
+    "cypress-mailslurp": "^1.9.0",
+    "multiple-cucumber-html-reporter": "^3.6.2"
   },
-  "description": ""
+  "description": "",
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "reports/json/signup-report.json"
+    },
+    "html": {
+      "enabled": true,
+      "output": "reports/html/signup-report.html"
+    }
+  }
 }
