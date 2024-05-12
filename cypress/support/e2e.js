@@ -19,6 +19,7 @@ import './custom-commands/common-actions'
 import 'cypress-fill-command'
 import 'cypress-mailslurp'
 import 'cypress-mochawesome-reporter/register'
+import "allure-cypress";
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 beforeEach(()=>{
